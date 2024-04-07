@@ -19,14 +19,14 @@ pasteDir = input("Enter path to paste the files to > ")
 
 try:
     print("Loading Files...")
-    onlyfiles = [file for file in os.listdir(copyDir) if isfile(join(copyDir, file))]
+    filesFound = [file for file in os.listdir(copyDir) if isfile(join(copyDir, file))]
     
     print("Coping files...")
-    for file in onlyfiles:
+    for file in filesFound:
         shutil.copy2(join(copyDir,file), pasteDir)
     
     print("Adding txt extension...")
-    for file in onlyfiles:
+    for file in filesFound:
         os.rename(join(pasteDir,file), join(pasteDir, file + '.txt'))
     
     print("\n" +
