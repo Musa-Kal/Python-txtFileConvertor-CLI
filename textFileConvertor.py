@@ -1,5 +1,6 @@
 """
 Author: Musa Kaleem
+Purpose: Code copies and converts all files into text files from one specified directory to another. 
 """
 
 import os
